@@ -1,0 +1,15 @@
+type Customer {
+  id: ID!
+  name: String!
+  email: String!
+  address: String!
+}
+
+type Query {
+  customer(id: ID!): Customer
+  login(email: String!, password: String!): Customer
+}
+
+type Mutation {
+  register(name: String!, email: String!, password: String!, address: String!): Customer
+}
